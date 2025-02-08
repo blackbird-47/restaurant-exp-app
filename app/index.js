@@ -8,8 +8,8 @@ export default function App() {
     return (
         <View style={{flex: 1, backgroundColor: '#fefae0'}}>
             <Header/>
-            <WelcomeMessage/>
-            {/*<Menu/>*/}
+            {/*<WelcomeMessage/>*/}
+            <Menu/>
             <Footer/>
         </View>
     );

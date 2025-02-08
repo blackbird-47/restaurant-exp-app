@@ -1,6 +1,6 @@
 ## Prerequisites
 1. Node JS.
-2. IOS simulator.
+2. iOS simulator.
 3. Expo CLI.
 4. Watchman (to improve app reload performance).
 

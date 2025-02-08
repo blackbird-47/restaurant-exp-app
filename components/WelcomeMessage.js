@@ -5,7 +5,7 @@ export default function WelcomeMessage() {
     return (
         <View style={styles.container}>
             <Text style={styles.welcomeText}>Welcome to Little Lemon.</Text>
-            <ScrollView style={stylesForDescription.container} showsVerticalScrollIndicator={true} indicatorStyle='white'>
+            <ScrollView style={stylesForDescription.container} indicatorStyle='black'>
                 <Text style={stylesForDescription.welcomeText}>
                     Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. 
                     Our menu is inspired by seasonal ingredients and local flavors, ensuring that every dish is fresh and delicious. 

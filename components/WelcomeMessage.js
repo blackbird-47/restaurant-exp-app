@@ -7,11 +7,9 @@ export default function WelcomeMessage() {
             <Text style={styles.welcomeText}>Welcome to Little Lemon.</Text>
             <ScrollView style={stylesForDescription.container} indicatorStyle='black'>
                 <Text style={stylesForDescription.welcomeText}>
-                    Little Lemon is a charming neighborhood bistro that serves simple food and classic cocktails in a lively but casual environment. 
-                    Our menu is inspired by seasonal ingredients and local flavors, ensuring that every dish is fresh and delicious. 
-                    Whether you're here for a quick bite or a leisurely meal, we strive to provide a warm and welcoming atmosphere. 
-                    We would love to hear more about your experience with us, so please don't hesitate to share your thoughts and feedback. 
-                    Thank you for choosing Little Lemon, and we hope you have a wonderful dining experience!
+                Little Lemon is a charming neighborhood bistro that serves simple food
+                and classic cocktails in a lively but casual environment. We would love
+                to hear more about your experience with us!
                 </Text>
             </ScrollView>
         </View>
@@ -37,7 +35,7 @@ const stylesForDescription = StyleSheet.create({
         padding: 10,
     },
     welcomeText: {
-        fontSize: 24,
+        fontSize: 22,
         padding: 20,
         textAlign: 'center',
         lineHeight: 40,

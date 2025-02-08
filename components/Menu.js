@@ -22,7 +22,7 @@ export default function Menu() {
 
     return (
         <View style={styles.container}>
-            <Text style={}>Menu.</Text>
+            <Text style={styles.menuHeading}>Menu.</Text>
             <SectionList 
                 sections={items} 
                 keyExtractor={(item, index) => item + index} 

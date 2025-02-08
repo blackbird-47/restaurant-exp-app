@@ -12,7 +12,7 @@ export default function LittleLemonFooter() {
 const styles = StyleSheet.create({
     container: {
         padding: 10,
-        backgroundColor: '#dda15e',
+        backgroundColor: '#606c38',
         alignItems: 'center',
         position: 'absolute',
         bottom: 0,
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 15,
-        color: '#333',
+        color: '#fefae0',
         fontFamily: 'sf-pro-display'
     },
 });

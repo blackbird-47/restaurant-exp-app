@@ -7,6 +7,7 @@ import Footer from '../components/HomeFooter';
 import UsernameForm from '../components/UsernameForm';
 import Login from '../components/Login';
 import Logo from '../components/Logo';
+import Homescreen from '../components/Homescreen';
 
 const Stack = createNativeStackNavigator();
 
@@ -14,19 +15,10 @@ export default function App() {
     const colorScheme = useColorScheme();
 
     return (
-            <Stack.Navigator>
-                <Stack.Screen name="Welcome" component={WelcomeMessage}/>
-                {/*<View style={[styles.main, {backgroundColor: colorScheme === 'light' ? '#fefae0' : '#283618'}]}>
-                    <Header/>
-                    <Logo/>
-                    <WelcomeMessage/>
-                    <Menu/>
-                    <UsernameForm/>
-                    <Login/>
-                    <Footer/>
-                </View>*/}
-            </Stack.Navigator>
-            
+            <Stack.Navigator initialRouteName="login" screenOptions={{headerStyle: {backgroundColor: '#fefae0'}}}>
+                <Stack.Screen name="homescreen" component={Homescreen} options={{title: "Home"}}/>
+                <Stack.Screen name="login" component={Login} options={{title: "Login"}}/>
+            </Stack.Navigator>   
     );
 }
 

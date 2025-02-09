@@ -7,6 +7,8 @@ export default function Logo() {
             <Image 
                 source={require("../assets/littlelemon_logo.webp")} 
                 style={styles.logo} 
+                accessible={true}
+                accessibilityLabel='Little Lemon Logo'
             />
             <Text style={styles.title}>Little Lemon, your local Mediterranean Bistro.</Text>
         </View>

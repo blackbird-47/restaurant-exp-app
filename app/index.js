@@ -15,7 +15,7 @@ export default function App() {
     const colorScheme = useColorScheme();
 
     return (
-            <Stack.Navigator initialRouteName="login" screenOptions={{headerStyle: {backgroundColor: '#fefae0'}}}>
+            <Stack.Navigator initialRouteName="homescreen" screenOptions={{headerStyle: {backgroundColor: '#fefae0'}}}>
                 <Stack.Screen name="homescreen" component={Homescreen} options={{title: "Home"}}/>
                 <Stack.Screen name="login" component={Login} options={{title: "Login"}}/>
             </Stack.Navigator>   

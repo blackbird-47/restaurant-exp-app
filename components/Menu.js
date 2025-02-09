@@ -46,9 +46,7 @@ export default function Menu() {
 
 const styles = StyleSheet.create({
     container: {
-        top: 100,
         padding: 10,
-        marginBottom: 135,
     },
     scrollContainer: {
         top: 40,

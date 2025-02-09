@@ -14,6 +14,9 @@ export default function Homescreen ({ navigation }) {
             <Pressable onPress={() => navigation.navigate('login')}>
                 <Text style={styles.loginButton}>Go to Login Page</Text>
             </Pressable>
+            <Pressable onPress={() => navigation.navigate('menu')}>
+                <Text style={styles.menuButton}>Our Menu</Text>
+            </Pressable>
             <Footer/>
         </View>
     );
@@ -33,5 +36,16 @@ const styles = StyleSheet.create({
         backgroundColor: '#dda15e',
         alignSelf: 'center',
         top: 200,
+    },
+    menuButton: {
+        fontSize: 20,
+        padding: 8,
+        color: '#283618',
+        borderRadius: 12,
+        marginLeft: 20,
+        marginRight: 20,
+        backgroundColor: '#dda15e',
+        alignSelf: 'center',
+        top: 250,
     },
 });

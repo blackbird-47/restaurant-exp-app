@@ -2,11 +2,11 @@ import React, {useState} from "react";
 import {View, Text, TextInput, StyleSheet, KeyboardAvoidingView} from "react-native";
 
 export default function Login() {
-    const [username, setUsername] = useState('');
+    const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
 
-    const handleUsernameChange = (text) => {
-        setUsername(text);
+    const handleEmailChange = (text) => {
+        setEmail(text);
     };
 
     const handlePasswordChange = (text) => {
@@ -19,9 +19,9 @@ export default function Login() {
             <Text style={styles.loginText}>Login to Continue</Text>
             <TextInput
                 style={styles.input}
-                placeholder="Username"
-                value={username}
-                onChangeText={handleUsernameChange}
+                placeholder="Email"
+                value={email}
+                onChangeText={handleEmailChange}
                 keyboardType='default'
             />
             <TextInput

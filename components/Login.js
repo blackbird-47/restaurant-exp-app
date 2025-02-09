@@ -1,9 +1,10 @@
 import React, {useState} from "react";
-import {View, Text, TextInput, StyleSheet, KeyboardAvoidingView} from "react-native";
+import {View, Text, TextInput, StyleSheet, KeyboardAvoidingView, Pressable} from "react-native";
 
 export default function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+    const [isLogin, setIsLogin] = useState(false);
 
     const handleEmailChange = (text) => {
         setEmail(text);
@@ -16,22 +17,30 @@ export default function Login() {
     return (
         <KeyboardAvoidingView style={styles.container} behavior='padding'>
             <Text style={styles.welcomeText}>Welcome to Little Lemon.</Text>
-            <Text style={styles.loginText}>Login to Continue</Text>
-            <TextInput
-                style={styles.input}
-                placeholder="Email"
-                value={email}
-                onChangeText={handleEmailChange}
-                keyboardType='default'
-            />
-            <TextInput
-                style={styles.input}
-                placeholder="Password"
-                value={password}
-                onChangeText={handlePasswordChange}
-                keyboardType='default'
-                secureTextEntry={true}
-            />
+            {!isLogin && (
+                <View>
+                    <Text style={styles.loginText}>Login to Continue</Text>
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Email"
+                        value={email}
+                        onChangeText={handleEmailChange}
+                        keyboardType='default'
+                    />
+                    <TextInput
+                        style={styles.input}
+                        placeholder="Password"
+                        value={password}
+                        onChangeText={handlePasswordChange}
+                        keyboardType='default'
+                        secureTextEntry={true}
+                    />
+                    <Pressable style={styles.loginButton} onPress={() => setIsLogin(true)}>
+                        <Text style={styles.loginButton}>Log in</Text>
+                    </Pressable>
+                </View>
+            )}
+            {isLogin && <Text style={styles.loginText}>You are logged in.</Text>}
         </KeyboardAvoidingView>
     );
 }
@@ -43,6 +52,7 @@ const styles = StyleSheet.create({
         padding: 16,
     },
     welcomeText: {
+        flex: 0.3,
         fontSize: 30,
         padding: 20,
         color: '#283618',
@@ -53,6 +63,16 @@ const styles = StyleSheet.create({
         padding: 30,
         color: '#283618',
         textAlign: 'center',
+    },
+    loginButton: {
+        fontSize: 20,
+        padding: 5,
+        color: '#283618',
+        borderRadius: 10,
+        marginLeft: 20,
+        marginRight: 20,
+        backgroundColor: '#dda15e',
+        alignSelf: 'center',
     },
     input: {
         height: 40,

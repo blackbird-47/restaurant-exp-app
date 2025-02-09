@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, StyleSheet, KeyboardAvoidingView } from 'react-native';
 
-export default function UserForm() {
+export default function UsernameForm() {
     const [firstName, setFirstName] = useState('');
 
     const handleInputChange = (text) => {

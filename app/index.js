@@ -3,15 +3,17 @@ import Header from '../components/HomeHeader';
 import WelcomeMessage from '../components/WelcomeMessage';
 import Menu from '../components/Menu';
 import Footer from '../components/HomeFooter';
-import UserForm from '../components/UserForm';
+import UsernameForm from '../components/UsernameForm';
+import Login from '../components/Login';
 
 export default function App() {
     return (
         <View style={styles.main}>
             <Header/>
-            <WelcomeMessage/>
-            {/*<Menu/>*/}
-            <UserForm/>
+            {/*<WelcomeMessage/>
+            <Menu/>
+            <UsernameForm/>*/}
+            <Login/>
             <Footer/>
         </View>
     );

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ScrollView, View, Text, StyleSheet, FlatList, SectionList } from 'react-native';
+import { ScrollView, View, Text, StyleSheet, FlatList, SectionList, Pressable } from 'react-native';
 import Footer from './HomeFooter';
 
 const Item = ({ name, price }) => (
@@ -13,7 +13,7 @@ const Separator = () => (
     <View style={styles.separator}/>
 );
 
-export default function Menu() {
+export default function Menu({navigation}) {
     const renderItem = ({ item }) => <Item name={item.name} price={item.price} />;
 
     const renderSectionHeader = ({ section: {title} }) => (
@@ -30,7 +30,9 @@ export default function Menu() {
                 renderSectionHeader={renderSectionHeader} 
                 ListFooterComponent={Footer}
                 ItemSeparatorComponent={Separator}/>
-            
+            <Pressable onPress={() => navigation.goBack()}>
+                <Text style={styles.homeButton}>Go back</Text>
+            </Pressable>
             {/* <FlatList data={items} keyExtractor={(item) => item.id} renderItem={renderItem}/>
             The following ScrollView block is disabled in favor of using FlatList for better performance and built-in optimizations
             {/* <ScrollView style={styles.scrollContainer} showsVerticalScrollIndicator={true} indicatorStyle='white'> 
@@ -46,10 +48,11 @@ export default function Menu() {
 
 const styles = StyleSheet.create({
     container: {
-        padding: 10,
+        flex: 1,
+        padding: 15,
     },
     scrollContainer: {
-        top: 40,
+        top: 100,
         padding: 10,
     },
     menuHeading: {
@@ -90,7 +93,18 @@ const styles = StyleSheet.create({
     separator: {
         backgroundColor: '#606c38', 
         height: 1
-    }
+    },
+    homeButton: {
+        top: 5,
+        fontSize: 20,
+        padding: 10,
+        color: '#283618',
+        borderRadius: 10,
+        width: 100,
+        backgroundColor: '#dda15e',
+        alignSelf: 'center',
+        textAlign: 'center',
+    },
 });
 
 const items = [

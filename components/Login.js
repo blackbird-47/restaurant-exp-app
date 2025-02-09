@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import {View, Text, TextInput, StyleSheet, KeyboardAvoidingView, Pressable} from "react-native";
 
-export default function Login() {
+export default function Login({navigation}) {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [isLogin, setIsLogin] = useState(false);
@@ -38,6 +38,9 @@ export default function Login() {
                     <Pressable style={styles.loginButton} onPress={() => setIsLogin(true)}>
                         <Text style={styles.loginButton}>Log in</Text>
                     </Pressable>
+                    <Pressable onPress={() => navigation.goBack()}>
+                        <Text style={styles.homeButton}>Go back</Text>
+                    </Pressable>
                 </View>
             )}
             {isLogin && <Text style={styles.loginText}>You are logged in.</Text>}
@@ -73,6 +76,17 @@ const styles = StyleSheet.create({
         marginRight: 20,
         backgroundColor: '#dda15e',
         alignSelf: 'center',
+    },
+    homeButton: {
+        top: 20,
+        fontSize: 20,
+        padding: 10,
+        color: '#283618',
+        borderRadius: 10,
+        width: 100,
+        backgroundColor: '#dda15e',
+        alignSelf: 'center',
+        textAlign: 'center',
     },
     input: {
         height: 40,

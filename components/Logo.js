@@ -8,7 +8,7 @@ export default function Logo() {
                 source={require("../assets/littlelemon_logo.webp")} 
                 style={styles.logo} 
             />
-            <Text style={styles.title}>Welcome to Little Lemon Restaurant.</Text>
+            <Text style={styles.title}>Little Lemon, your local Mediterranean Bistro.</Text>
         </View>
     );
 };
@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
         width: 150,
         height: 150,
         marginBottom: 10,
+        resizeMode: 'contain',
     },
     title: {
         fontSize: 24,
-        fontWeight: 'bold',
         textAlign: 'center',
         top: 50,
     },

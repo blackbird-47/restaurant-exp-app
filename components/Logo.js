@@ -1,7 +1,9 @@
 import React from 'react';
-import { View, Text, Image, StyleSheet } from 'react-native';
+import { View, Text, Image, StyleSheet, useColorScheme } from 'react-native';
 
 export default function Logo() {
+    const colorScheme = useColorScheme();
+
     return (
         <View style={styles.container}>
             <Image 
@@ -10,7 +12,7 @@ export default function Logo() {
                 accessible={true}
                 accessibilityLabel='Little Lemon Logo'
             />
-            <Text style={styles.title}>Little Lemon, your local Mediterranean Bistro.</Text>
+            <Text style={[styles.title, {color: colorScheme === 'light' ? '#283618' : '#fefae0'}]}>Little Lemon, your local Mediterranean Bistro.</Text>
         </View>
     );
 };

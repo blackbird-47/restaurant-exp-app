@@ -1,4 +1,4 @@
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, useColorScheme} from 'react-native';
 import Header from '../components/HomeHeader';
 import WelcomeMessage from '../components/WelcomeMessage';
 import Menu from '../components/Menu';
@@ -8,8 +8,10 @@ import Login from '../components/Login';
 import Logo from '../components/Logo';
 
 export default function App() {
+    const colorScheme = useColorScheme();
+
     return (
-        <View style={styles.main}>
+        <View style={[styles.main, {backgroundColor: colorScheme === 'light' ? '#fefae0' : '#283618'}]}>
             <Header/>
             <Logo/>
             {/*<WelcomeMessage/>
@@ -24,6 +26,5 @@ export default function App() {
 const styles = StyleSheet.create({
     main: {
         flex: 1, 
-        backgroundColor: '#fefae0'
     }
 });

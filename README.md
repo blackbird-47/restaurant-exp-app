@@ -1,12 +1,22 @@
-# Little Lemon
-This repository follows the react-native course on [Coursera](https://www.coursera.org/learn/react-native-course/home).
+# Little Lemon Newsletter Signup
+This branch has the following features for the Little Lemon Restaurant app,
+1. Homescreen which uses View, KeyboardAvoidingView, Text, Image, Pressable, Header and Footer components.
+2. Homescreen has a signup button which navigates to a newslettter signup screen.
+3. The signup screen uses a TextInput component to allow user to enter their email.
+4. A signup button once pressed sends a confirmation notification to the user.
 
-I have built a cross-platform app using React Native and Expo for a restaurant which has features such as,
-1. Home page.
-2. Menu with prices.
-3. Navigation.
-4. User input on various fields.
+## React Native components used
+1. View
+2. Text
+3. KeyboardAvoidingView
+4. ScrollView
+5. Image
+6. Pressable
+7. TextInput
 
+## React hooks used
+1. useState
+2. useColorScheme
 
 ## Prerequisites
 1. Node JS.

@@ -3,13 +3,12 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { Ionicons } from '@expo/vector-icons';
-import Menu from '../components/Menu';
-import Login from '../components/Login';
 import Homescreen from '../components/Homescreen';
+import NewsletterSignup from '../components/NewsletterSignup';
 
-//const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator();
 //const Tab = createBottomTabNavigator();
-const Drawer = createDrawerNavigator();
+//const Drawer = createDrawerNavigator();
 
 const logo = () => {
     return <Image 
@@ -22,11 +21,10 @@ const logo = () => {
 
 export default function App() {
     return (
-            <Drawer.Navigator initialRouteName='homescreen'>
-                <Drawer.Screen name="homescreen" component={Homescreen} options={{headerTitle: logo, title: "Home"}}/>
-                <Drawer.Screen name="login" component={Login} options={{title: "Login"}}/>
-                <Drawer.Screen name="menu" component={Menu} options={{title: "Menu"}}/>
-            </Drawer.Navigator>   
+            <Stack.Navigator initialRouteName='homescreen'>
+                <Stack.Screen name="homescreen" component={Homescreen} options={{headerTitle: logo, title: "Home"}}/>
+                <Stack.Screen name="newsletterscreen" component={NewsletterSignup} options={{title: "Newsletter"}}/>
+            </Stack.Navigator>   
     );
 }
 

@@ -11,11 +11,8 @@ export default function Homescreen ({ navigation }) {
         <View style={[styles.container, {backgroundColor: colorScheme === 'light' ? '#fefae0' : '#283618'}]}>
             <Header/>
             <Logo/>
-            <Pressable onPress={() => navigation.navigate('login')}>
-                <Text style={styles.loginButton}>Go to Login Page</Text>
-            </Pressable>
-            <Pressable onPress={() => navigation.navigate('menu')}>
-                <Text style={styles.menuButton}>Our Menu</Text>
+            <Pressable onPress={() => navigation.navigate('newsletterscreen')}>
+                <Text style={styles.loginButton}>Sign up for our Newsletter</Text>
             </Pressable>
             <Footer/>
         </View>

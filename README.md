@@ -1,6 +1,5 @@
 # Little Lemon Bistro
-<img src="./samples/home.png" alt="Little Lemon Bistro" width="195"/>
-<img src="./samples/login.png" alt="Little Lemon Bistro" width="200"/>
+<img src="./samples/home.png" alt="Little Lemon Bistro" width="195"/><img src="./samples/login.png" alt="Little Lemon Bistro" width="200"/>
 
 A cross-platform restaurant app with React Native and Expo. Supports,
 1. Home screen.
